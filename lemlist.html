@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <section class="main-header">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="container">
+                <a href="https://abjpartners.com/" target="blank" class="navbar-brand text-warning ml-3">
+                    <img src="data:image/png;base64,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" width="30" height="30" alt=""></a>
+                <button class="navbar-toggler btn-outline-dark" type="button" data-toggle="collapse" data-target="#abj-navbar" aria-controls="abj-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="abj-navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link mr-3" href="#" data-toggle="modal" data-target="#task-modal">
+                               <i class="fa fa-chart-bar text-muted"></i> Invite users
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="input-group  md-form flex-nowrap form-1 pl-0">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text purple lighten-3" id="basic-text1"><i class="bi bi-search"></i></span>
+                                </div>
+                                <input class="form-control my-0 py-1" type="text" placeholder="Searchpage,user,email,domain name" aria-label="Search">
+                              </div>
+                        </li>
+                        <li class="nav-item dropdown pl-2">
+                            <a class="nav-link" href="/">
+                                <i class="bi-circle"></i></a>
+                        </li>
+                        
+                        <li class="nav-item dropdown pl-2">
+                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                <i class="bi-lightning-charge-fill "></i></a>
+                        </li>
+                        <li class="nav-item dropdown pl-2">
+                            <button type="button" class="btn btn-outline-light btn-sm" data-toggle="modal" data-target="#myModal"><a href="#" target="blank" class="navbar-brand text-warning ml-3">
+                                <img src="data:image/png;base64,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" width="25" height="25" alt=""></a></button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header pd-0">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h6>ABJ Partners</h6>
+                                                    <p>vip.j@abjpartners.com</p>
+                                                </div>
+                                            </div>
+                                           
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Modal body content goes here -->
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-gear" style="font-size: 24px;"></i>
+                                                Profile
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-gear" style="font-size: 24px;"></i>
+                                                Profile
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-gear" style="font-size: 24px;"></i>
+                                                Profile
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-gear" style="font-size: 24px;"></i>
+                                                Profile
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-gear" style="font-size: 24px;"></i>
+                                                Profile
+                                            </a>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown pl-2">
+                            <a class="nav-link" href="/">
+                                <i class="bi-bell-fill"></i></a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-sm" aria-labelledby="navbarDropdown">
+                                <div class="card border-0">
+                                    <div class="card-body">
+                                        
+                                            <div class="col-6">
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="bi bi-gear" style="font-size: 24px;"></i>
+                                                    Profile
+                                                </a>
+                    
+                                            </div>
+                                       
+                                        <hr>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi bi-gear" style="font-size: 24px;"></i>
+                                            Profile
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+            </div>
+        </nav>
+    </section>
+    <section class=" dashboard  pt-2 ml-5 bg-light text-primaary">
+        <div class="container">
+            <div class="row">
+                <h1 class="animated flipInY">Dashboard</h1>
+                   <ul class="dashboard-nav ml-auto">
+                    <button class="btn btn-dark" data-toggle="modal" data-target="#task-modal">
+                           <i class="bi bi-chart-bar text-muted"></i> Invite users
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="modal" id="task-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content animated jackInTheBox">
+                <div class="modal-header bg-light text-dark">
+                    <h3>Add Task</h3>
+                    <button class="close" data-dismiss="modal">
+                        <i class="bi bi-times-circle"></i>
+                    </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <form>
+                        <div class="form-group">
+                            <label class="form-check-label">Title</label>
+                            <input type="text" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label">Category</label>
+                            <select class="form-control">
+                                <option value="">Select a Category</option>
+                                <option value="">Development</option>
+                                <option value="">Maintenance</option>
+                                <option value="">Production Support</option>
+                                <option value="">Client Meetings</option>
+                                <option value="">Bug Fixings</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label">Image Upload</label>
+                            <input type="file" class="form-control-file">
+                            <small>MAX Size : 3MB</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label">Description</label>
+                            <textarea name="editor1" rows="4" class="form-control" placeholder="Description"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" value="Add Task">
+                            <a href="#" data-dismiss="modal" class="btn btn-dark">close</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <i class="bi bi-square" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>My Tasks</h4>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <i class="bi bi-arrow-bar-right" style="font-size: 24px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <i class="bi bi-square" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>My Tasks</h4>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <i class="bi bi-arrow-bar-right" style="font-size: 24px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <i class="bi bi-square" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>My Tasks</h4>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <i class="bi bi-arrow-bar-right" style="font-size: 24px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-3">
+        <div class="container">
+            <div class="row-ml-auto">
+                <div class="col-md-3 "><p>Lorem ipsum dolor sit amet.</p></div>
+            </div>
+    </section>
+    <section class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 animated slideInUp delay-3s">
+                    <div class="card">
+                        <div class="card-header bg-light ">
+                            <div class="row align-items-center">
+                                <i class="bi bi-calendar fa-3x" style="font-size: 24px;"></i>  
+                                <div class="col">
+                                    <h4>Book a Lemlist Demo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-outline-dark btn-lg" href="/">Get in touch with our sales team <i></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 animated slideInUp delay-3s">
+                    <div class="card card-lg">
+                        <div class="card-header bg-light ">
+                            <div class="row align-items-center">
+                                <i class="bi bi-calendar fa-3x" style="font-size: 24px;"></i> 
+                                
+                                <div class="col">
+                                    <h4>Book a Lemlist Demo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-outline-primary btn-lg" href="/">Get in touch with our sales team <i></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 animated slideInUp delay-3s">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="row align-items-center">
+                                <i class="bi bi-calendar fa-3x" style="font-size: 24px;"></i> 
+                                
+                                <div class="col">
+                                    <h4>Book a Lemlist Demo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-outline-warning btn-lg" href="/">Get in touch with our sales team <i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3 animated slideInUp delay-3s">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="row align-items-center">
+                                <i class="bi bi-calendar fa-3x" style="font-size: 24px;"></i> 
+                                
+                                <div class="col">
+                                    <h4>Book a Lemlist Demo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-outline-danger btn-lg" href="/">Get in touch with our sales team </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 animated slideInUp delay-3s">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="row align-items-center">
+                                <i class="bi bi-calendar fa-3x" style="font-size: 24px;"></i> 
+                                
+                                <div class="col">
+                                    <h4>Book a Lemlist Demo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-outline-success btn-lg" href="/">Get in touch with our sales team <i></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 animated slideInUp delay-3s">
+                    <div class="card">
+                        <div class="card-header bg-ligh">
+                            <div class="row align-items-center">
+                                <i class="bi bi-calendar fa-3x" style="font-size: 24px;"></i> 
+                                
+                                <div class="col">
+                                    <h4>Book a Lemlist Demo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <a href="/" class="btn btn-outline-secondary btn-lg">Get in touch with our sales team</a>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </section>
+    <!-- ************** END Here ****************-->
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

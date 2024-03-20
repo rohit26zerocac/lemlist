@@ -1,0 +1,36 @@
+<style>
+    /* Custom styles for the dropdown menu */
+    .dropdown-menu {
+        width: 600px; /* Set the desired width */
+    }
+
+    /* Custom styles for the card */
+    .dropdown-card {
+        border: none; /* Remove the border */
+        border-radius: 10px; /* Add border-radius for rounded corners */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow for depth */
+        background-color: #fff; /* Set background color */
+        width:600px
+    }
+
+    /* Custom styles for card body */
+    .dropdown-card .card-body {
+        padding: 20px; /* Add padding inside the card body */
+    }
+    ..dropdown-card .card-body:hover {
+        color: #333; /* Set text color on hover */
+        padding: 20px; /* Add padding inside the card body on hover */
+    }
+    
+
+    /* Custom styles for dropdown items */
+    .dropdown-item {
+        color: #333; /* Set text color */
+    }
+
+    /* Custom styles for dropdown subitem */
+    .dropdown-subitem {
+        color: #888; /* Set subitem text color */
+        margin-left: 20px; /* Add margin for indentation */
+    }
+</style>
